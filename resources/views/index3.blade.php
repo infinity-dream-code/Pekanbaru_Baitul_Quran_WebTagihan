@@ -312,7 +312,7 @@ h1{font-size:1.15rem}
       <div class="form-grid">
         <div class="field">
           <label>Nomor Induk Siswa <em>*</em></label>
-          <input type="text" name="no_cust" id="noCust" inputmode="numeric" autocomplete="username" placeholder="7977xxx" value="{{ old('no_cust', $va ?? '') }}" required>
+          <input type="text" name="no_cust" id="noCust" inputmode="numeric" autocomplete="username" placeholder="96240xxx" value="{{ old('no_cust', $va ?? '') }}" required>
         </div>
         <div class="field">
           <label>Password <em>*</em></label>
@@ -725,7 +725,7 @@ h1{font-size:1.15rem}
         @csrf
         <div class="field">
           <label>Nomor Induk Siswa <em>*</em></label>
-          <input type="text" name="no_cust" id="maNoCust" placeholder="7977xxx" required autocomplete="username">
+          <input type="text" name="no_cust" id="maNoCust" placeholder="96240xxx" required autocomplete="username">
         </div>
         <div class="field">
           <label>Password <em>*</em></label>
@@ -1293,9 +1293,9 @@ function formatRp(n) {
 function formatNovaDisplay(va) {
   let n = String(va ?? '').replace(/\s+/g, '');
   if (!n || n === '-') return '-';
-  n = n.replace(/^(797783|757777|797766|751000)/, '');
+  n = n.replace(/^(96240|797783|757777|797766|751000)/, '');
   n = n.replace(/^0+/, '') || n;
-  return n ? ('797783' + n) : '-';
+  return n ? ('96240' + n) : '-';
 }
 
 function esc(s) {
@@ -1617,7 +1617,7 @@ async function prosesPembayaran() {
           <div class="va-number" id="vaNumberText">${esc(va)}</div>
           <button type="button" class="btn-copy" onclick="copyVa()">Salin nomor VA</button>
           <p class="va-meta">Total: <b>${formatRp(total)}</b></p>
-          <p class="va-help">Bayar ke nomor VA di atas (kode bank 797783).</p>
+          <p class="va-help">Bayar ke nomor VA di atas (kode bank 96240).</p>
         </div>`;
       const actions = document.getElementById('payActions');
       if (actions) {
