@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Cek & Bayar Tagihan - Al-Syukro",
-  "short_name": "Al-Syukro",
-  "description": "Cek dan bayar tagihan siswa Al-Syukro",
+  "name": "Cek & Bayar Tagihan - Yayasan Al Istiqomah Kuningan",
+  "short_name": "Al Istiqomah",
+  "description": "Cek dan bayar tagihan siswa Yayasan Al Istiqomah Kuningan",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
@@ -21,13 +21,13 @@
   ],
   "icons": [
     {
-      "src": "/icon.png",
+      "src": "/istiqomah.png",
       "sizes": "any",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon.png",
+      "src": "/istiqomah.png",
       "sizes": "any",
       "type": "image/png",
       "purpose": "maskable"
