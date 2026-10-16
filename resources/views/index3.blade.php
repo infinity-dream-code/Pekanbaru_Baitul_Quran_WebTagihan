@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Cek Tagihan | Yayasan Al Istiqomah Kuningan</title>
+<title>Cek Tagihan | Ponpes Baitul Qur'an</title>
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<meta name="description" content="Cek tagihan siswa Yayasan Al Istiqomah Kuningan">
+<meta name="description" content="Cek tagihan siswa Ponpes Baitul Qur'an Kota Pekanbaru, Prov. Riau">
 <meta name="theme-color" content="#14532d">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Yayasan Al Istiqomah Kuningan">
+<meta name="apple-mobile-web-app-title" content="Ponpes Baitul Qur'an">
 <link rel="manifest" href="{{ asset('manifest.webmanifest') }}">
-<link rel="icon" type="image/png" href="{{ asset('istiqomah.png') }}">
-<link rel="apple-touch-icon" href="{{ asset('istiqomah.png') }}">
+<link rel="icon" type="image/jpeg" href="{{ asset('logo_baitul_quran.jpeg') }}">
+<link rel="apple-touch-icon" href="{{ asset('logo_baitul_quran.jpeg') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -69,7 +69,8 @@ html.dark .page-bg{background:
 .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;gap:10px}
 .brand-wrap{display:flex;align-items:center;gap:12px;min-width:0}
 .brand-logo{height:52px;width:auto;max-width:220px;object-fit:contain;object-position:left center;flex-shrink:0;border-radius:8px;background:#fff}
-.brand{font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--text3);text-transform:uppercase;margin-bottom:3px}
+.brand{font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--text3);text-transform:uppercase;margin-bottom:2px}
+.brand-loc{font-size:11px;font-weight:500;color:var(--text3);margin-bottom:3px;line-height:1.3}
 h1{font-size:1.35rem;font-weight:700;color:var(--text);line-height:1.25;margin:0}
 .theme-btn{display:flex;align-items:center;justify-content:center;gap:7px;min-width:44px;min-height:44px;padding:0 12px;border-radius:12px;border:1px solid var(--border2);background:var(--surface);font-size:13px;color:var(--text2);cursor:pointer;transition:background .15s,border .15s;flex-shrink:0}
 .theme-btn:hover{background:var(--surface2)}
@@ -287,9 +288,10 @@ h1{font-size:1.15rem}
 <div class="wrap">
   <div class="topbar">
     <div class="brand-wrap">
-      <img src="{{ asset('istiqomah.png') }}" alt="Yayasan Al Istiqomah Kuningan" class="brand-logo">
+      <img src="{{ asset('logo_baitul_quran.jpeg') }}" alt="Ponpes Baitul Qur'an" class="brand-logo">
       <div>
-        <div class="brand">Yayasan Al Istiqomah Kuningan</div>
+        <div class="brand">Ponpes Baitul Qur'an</div>
+        <div class="brand-loc">Kota Pekanbaru, Prov. Riau</div>
         <h1>Cek tagihan</h1>
       </div>
     </div>
@@ -312,7 +314,7 @@ h1{font-size:1.15rem}
       <div class="form-grid">
         <div class="field">
           <label>Nomor Induk Siswa <em>*</em></label>
-          <input type="text" name="no_cust" id="noCust" inputmode="numeric" autocomplete="username" placeholder="797777xxx" value="{{ old('no_cust', $va ?? '') }}" required>
+          <input type="text" name="no_cust" id="noCust" inputmode="numeric" autocomplete="username" placeholder="777724xxx" value="{{ old('no_cust', $va ?? '') }}" required>
         </div>
         <div class="field">
           <label>Password <em>*</em></label>
@@ -604,7 +606,7 @@ h1{font-size:1.15rem}
     @endif
   @endif
 
-  <div class="footer">© {{ date('Y') }} Yayasan Al Istiqomah Kuningan. All rights reserved.</div>
+  <div class="footer">© {{ date('Y') }} Ponpes Baitul Qur'an · Kota Pekanbaru, Prov. Riau. All rights reserved.</div>
 </div>
 
 <div id="detailModal" class="modal-bg">
@@ -653,8 +655,9 @@ h1{font-size:1.15rem}
     </div>
     <div class="modal-body">
       <div class="install-hero">
-        <img src="{{ asset('istiqomah.png') }}" alt="Yayasan Al Istiqomah Kuningan">
-        <h4>Yayasan Al Istiqomah Kuningan</h4>
+        <img src="{{ asset('logo_baitul_quran.jpeg') }}" alt="Ponpes Baitul Qur'an">
+        <h4>Ponpes Baitul Qur'an</h4>
+        <p style="margin:0 0 .35rem;font-size:12px;color:var(--text3)">Kota Pekanbaru, Prov. Riau</p>
         <p id="installModalText">Pasang aplikasi ke perangkat Anda agar lebih cepat dibuka dan mudah diakses.</p>
       </div>
     </div>
@@ -725,7 +728,7 @@ h1{font-size:1.15rem}
         @csrf
         <div class="field">
           <label>Nomor Induk Siswa <em>*</em></label>
-          <input type="text" name="no_cust" id="maNoCust" placeholder="797777xxx" required autocomplete="username">
+          <input type="text" name="no_cust" id="maNoCust" placeholder="777724xxx" required autocomplete="username">
         </div>
         <div class="field">
           <label>Password <em>*</em></label>
@@ -1293,9 +1296,9 @@ function formatRp(n) {
 function formatNovaDisplay(va) {
   let n = String(va ?? '').replace(/\s+/g, '');
   if (!n || n === '-') return '-';
-  n = n.replace(/^(797777|96240|797783|757777|797766|751000)/, '');
+  n = n.replace(/^(777724|797777|96240|797783|757777|797766|751000)/, '');
   n = n.replace(/^0+/, '') || n;
-  return n ? ('797777' + n) : '-';
+  return n ? ('777724' + n) : '-';
 }
 
 function esc(s) {
@@ -1617,7 +1620,7 @@ async function prosesPembayaran() {
           <div class="va-number" id="vaNumberText">${esc(va)}</div>
           <button type="button" class="btn-copy" onclick="copyVa()">Salin nomor VA</button>
           <p class="va-meta">Total: <b>${formatRp(total)}</b></p>
-          <p class="va-help">Bayar ke nomor VA di atas (kode bank 797777).</p>
+          <p class="va-help">Bayar ke nomor VA di atas (kode bank 777724).</p>
         </div>`;
       const actions = document.getElementById('payActions');
       if (actions) {

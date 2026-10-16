@@ -5,7 +5,7 @@ if (!extension_loaded('gd')) {
     exit(1);
 }
 
-$src = dirname(__DIR__) . '/istiqomah.png';
+$src = dirname(__DIR__) . '/logo_baitul_quran.jpeg';
 $dir = __DIR__;
 
 if (!is_dir($dir)) {
